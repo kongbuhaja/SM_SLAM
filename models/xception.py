@@ -93,8 +93,8 @@ class ExitFlow(Layer):
 
         self.sep_conv1 = SConv(728, 3, kernel_initializer=self.kernel_initializer)
         self.sep_conv2 = SConv(1024, 3, kernel_initializer=self.kernel_initializer)
-        self.sep_conv3 = SConv(1024, 3, 1, dilation_rate=2, kernel_initializer=self.kernel_initializer)
-        self.branch_conv = Conv(1024, 1, 1, kernel_initializer=self.kernel_initializer)
+        self.sep_conv3 = SConv(1024, 3, 2, dilation_rate=2, kernel_initializer=self.kernel_initializer)
+        self.branch_conv = Conv(1024, 1, 2, kernel_initializer=self.kernel_initializer)
 
         self.sep_conv4 = SConv(1536, 3, kernel_initializer=self.kernel_initializer)
         self.sep_conv5 = SConv(1536, 3, dilation_rate=2, kernel_initializer=self.kernel_initializer)
@@ -111,6 +111,7 @@ class ExitFlow(Layer):
 
         x = self.sep_conv4(x, training)
         x = self.sep_conv5(x, training)
+        x = Upsample(2)(x)
         x = self.sep_conv6(x, training)
         
         return x
