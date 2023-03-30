@@ -1,0 +1,11 @@
+#dir
+/data
+/outputs
+/logs
+/checkpoints
+/__pycache__
+/.vscode
+*/__pycache__
+
+#file
+*.ipynb
