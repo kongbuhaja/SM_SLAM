@@ -1,4 +1,4 @@
-# Segmentation_SLAM(SSLAM)
+# Segmentation Masking SLAM(SMLAM)
 ## 프로젝트 목표 
 동적 장애물은 SLAM 진행간 keypoint검출에 안좋은 영향을 미치니 segmeation을 통한 masking으로 좋은 결과를 만들어보자
 ## Roles
