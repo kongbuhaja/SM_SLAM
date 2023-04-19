@@ -5,7 +5,7 @@
 - 형승호: carla기반 학습데이터 구축, ORB-SLAM2
 - 안현석: custom segmentation model 구현
 - 이세라: open source segmentation model 활용
-- 서영훈: DynaSLAM과 성능비교
+- 서영훈: ORB-SALM2, DynaSLAM과 성능비교
 
 ## 코드
 본 repository는 deeplab_v3+, panoptic deeplab을 base 혹은 참조해 구현한 symentic segmentation 모델이다.
